@@ -1,0 +1,65 @@
+# =========================
+# Laravel / PHP
+# =========================
+/vendor/
+/storage/*.key
+/storage/app/public/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/bootstrap/cache/*.php
+
+# .env files (muy importante, contienen credenciales)
+.env
+.env.*.backup
+.env.local
+.env.production
+
+# =========================
+# Node / Frontend
+# =========================
+/node_modules/
+/npm-debug.log
+/yarn-error.log
+/pnpm-lock.yaml
+
+# Build outputs
+/public/hot
+/public/storage
+/public/js/*.map
+/public/css/*.map
+/public/build
+
+# =========================
+# Composer
+# =========================
+composer.lock
+
+# =========================
+# VSCode / IDEs
+# =========================
+.vscode/*
+.idea/*
+*.sublime-workspace
+*.sublime-project
+
+# =========================
+# Sistema operativo
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Logs / cachés
+# =========================
+/*.log
+*.log
+*.cache
+*.tmp
+
+# =========================
+# Tests / coverage
+# =========================
+/coverage
+.phpunit.result.cache

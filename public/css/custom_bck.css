@@ -1,0 +1,27 @@
+/* NO activo → VERDE (texto e iconos) */
+aside.layout-menu a,
+aside.layout-menu button {
+  color: #206c52 !important;
+  --tw-text-opacity: 1 !important;
+  opacity: 1 !important;
+}
+aside.layout-menu a svg,
+aside.layout-menu button svg {
+  color: currentColor !important;
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+/* ACTIVO → BLANCO (lo activaremos con JS poniéndole data-active="true") */
+aside.layout-menu [data-active="true"],
+aside.layout-menu [data-active="true"] * {
+  color: #ffffff !important;
+  --tw-text-opacity: 1 !important;
+  opacity: 1 !important;
+}
+
+ /* Fondo opcional para distinguir el activo (borra si no lo quieres) */
+aside.layout-menu [data-active="true"] {
+  background-color: #0d6b4f !important;
+  border-radius: 10px;
+}

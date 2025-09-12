@@ -1,0 +1,86 @@
+/* === SPACare - UNED === */
+
+/* Fondo del sidebar */
+.sidebar {
+    background-color: #006633 !important;
+}
+
+/* Color de título de grupo */
+.sidebar .menu-group-title {
+    background-color: #004d26 !important;
+    color: #ffffff !important;
+    font-weight: bold;
+    padding: 0.75rem 1rem;
+}
+
+/* Elementos del menú */
+.sidebar .menu-item {
+    color: #e0f0e9 !important;
+    font-weight: 500;
+}
+
+/* Hover y elemento activo */
+.sidebar .menu-item--active,
+.sidebar .menu-item:hover {
+    background-color: #009966 !important;
+    color: #ffffff !important;
+}
+
+/* Iconos */
+.sidebar .menu-item svg {
+    stroke: #c9f3dd !important;
+}
+
+/* Separadores */
+.sidebar hr {
+    border-color: #ffffff22 !important;
+}
+
+/* Footer inferior del menú */
+.sidebar .footer {
+    background-color: #004d26 !important;
+    color: #e0f0e9 !important;
+    padding: 1rem;
+}
+
+/* Texto del usuario en el menú */
+.sidebar .footer strong {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+/* Botones generales */
+button,
+.btn {
+    background-color: #006633 !important;
+    color: white !important;
+    border: none !important;
+}
+
+button:hover,
+.btn:hover {
+    background-color: #009966 !important;
+}
+
+/* Tipografía general */
+body {
+    background-color: red !important;
+}
+/*Para que se oculte el menú en moviles*/
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%) !important;
+    }
+
+    .main {
+        margin-left: 0 !important;
+    }
+
+    .sidebar-open .sidebar {
+        transform: translateX(0%) !important;
+    }
+
+    .moonshine-body {
+        overflow-x: hidden;
+    }
+}

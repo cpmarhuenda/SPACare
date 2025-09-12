@@ -1,0 +1,94 @@
+/* custom.css — sin colores del menú (los pondremos inline con JS) */
+
+/* Oculta el crédito "Made with ..." */
+footer:has(a[href*="cutcode"]),
+.layout-copyright,
+.copyright {
+  display: none !important;
+}
+/* NO activo → VERDE (texto e iconos) */
+aside.layout-menu a:not([data-active="true"]):not([aria-current="page"]),
+aside.layout-menu button:not([data-active="true"]):not([aria-current="page"]),
+aside.layout-menu li:not([data-active="true"]):not([aria-current="page"]) > a,
+aside.layout-menu li:not([data-active="true"]):not([aria-current="page"]) > button {
+  color: #206c52 !important;
+  --tw-text-opacity: 1 !important; /* anula text-white/60 */
+  opacity: 1 !important;
+}
+aside.layout-menu a:not([data-active="true"]):not([aria-current="page"]) svg,
+aside.layout-menu button:not([data-active="true"]):not([aria-current="page"]) svg,
+aside.layout-menu li:not([data-active="true"]):not([aria-current="page"]) > a svg,
+aside.layout-menu li:not([data-active="true"]):not([aria-current="page"]) > button svg {
+  color: currentColor !important;
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+/* ACTIVO / página actual / desplegado → BLANCO (texto e iconos) */
+aside.layout-menu a[data-active="true"],
+aside.layout-menu button[data-active="true"],
+aside.layout-menu a[aria-current="page"],
+aside.layout-menu button[aria-current="page"],
+aside.layout-menu li[data-active="true"] > a,
+aside.layout-menu li[data-active="true"] > button,
+aside.layout-menu li[aria-current="page"] > a,
+aside.layout-menu li[aria-current="page"] > button,
+aside.layout-menu .menu-item-group > a[aria-expanded="true"],
+aside.layout-menu .menu-item-group > button[aria-expanded="true"] {
+  color: #ffffff !important;
+  --tw-text-opacity: 1 !important;
+  opacity: 1 !important;
+}
+aside.layout-menu a[data-active="true"] svg,
+aside.layout-menu button[data-active="true"] svg,
+aside.layout-menu a[aria-current="page"] svg,
+aside.layout-menu button[aria-current="page"] svg,
+aside.layout-menu li[data-active="true"] > a svg,
+aside.layout-menu li[data-active="true"] > button svg,
+aside.layout-menu li[aria-current="page"] > a svg,
+aside.layout-menu li[aria-current="page"] > button svg,
+aside.layout-menu .menu-item-group > a[aria-expanded="true"] svg,
+aside.layout-menu .menu-item-group > button[aria-expanded="true"] svg {
+  color: currentColor !important;
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+/*esto para que cuando esté seleccinado se ponga el texto blanco*/
+ /* === ACTIVO / PÁGINA ACTUAL → BLANCO === */
+/* Si el atributo va en el propio enlace/botón */
+aside.layout-menu a[data-active="true"],
+aside.layout-menu button[data-active="true"],
+aside.layout-menu a[aria-current="page"],
+aside.layout-menu button[aria-current="page"],
+/* Si el atributo va en el <li> padre */
+aside.layout-menu li[data-active="true"] > a,
+aside.layout-menu li[data-active="true"] > button,
+aside.layout-menu li[aria-current="page"] > a,
+aside.layout-menu li[aria-current="page"] > button,
+/* Grupo desplegado */
+aside.layout-menu .menu-item-group > a[aria-expanded="true"],
+aside.layout-menu .menu-item-group > button[aria-expanded="true"] {
+  color: #ffffff !important;
+  --tw-text-opacity: 1 !important;
+  opacity: 1 !important;
+  /* Fondo opcional para asegurar contraste en sidebar claro: */
+  background-color: #0d6b4f !important;  /* quítalo si no quieres fondo */
+  border-radius: 10px;                   /* opcional */
+}
+
+/* Iconos dentro del activo en blanco también */
+aside.layout-menu a[data-active="true"] svg,
+aside.layout-menu button[data-active="true"] svg,
+aside.layout-menu a[aria-current="page"] svg,
+aside.layout-menu button[aria-current="page"] svg,
+aside.layout-menu li[data-active="true"] > a svg,
+aside.layout-menu li[data-active="true"] > button svg,
+aside.layout-menu li[aria-current="page"] > a svg,
+aside.layout-menu li[aria-current="page"] > button svg,
+aside.layout-menu .menu-item-group > a[aria-expanded="true"] svg,
+aside.layout-menu .menu-item-group > button[aria-expanded="true"] svg {
+  color: currentColor !important;
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
