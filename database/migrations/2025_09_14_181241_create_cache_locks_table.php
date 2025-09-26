@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-       Schema::table('pacientes', function (Blueprint $table) {
-        $table->string('password')->nullable()->change();
-            //
-        });
+        if (!Schema::hasTable('cache_locks')) {
+            Schema::create('cache_locks', function (Blueprint $table) {
+                $table->string('key')->primary();
+                $table->string('owner');
+                $table->integer('expiration');
+            });
+        }
     }
 
     /**
@@ -22,8 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('pacientes', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('cache_locks');
     }
 };

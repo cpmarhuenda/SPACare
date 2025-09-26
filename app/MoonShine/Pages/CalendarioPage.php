@@ -25,7 +25,7 @@ class CalendarioPage extends Page
         $query = Cita::query()->with(['paciente', 'psicologo']);
 
         // Admin (id=1) ve todo
-        if (! $user->roles->contains('id', 1)) {
+        if (! $user->roles->contains('id', 3)) {
             if ($user->hasRole('Psicologo')) {
                 $psId = Psicologo::where('user_id', $user->id)->value('id');
                 $query->where('psicologo_id', $psId ?? -1);

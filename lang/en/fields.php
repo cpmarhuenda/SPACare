@@ -71,4 +71,6 @@ return [
 'remitente' => 'Sender',
 'asunto'    => 'Subject',
 'leido'     => 'Read',
+   'verArchivo' => 'View File',
+   'descargarArchivo' => 'Download File'
 ];

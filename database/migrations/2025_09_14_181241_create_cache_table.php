@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-  Schema::table('users', function (Blueprint $table) {
-    $table->unsignedTinyInteger('tipo_usuario')->nullable()->after('active'); // 1-4 como indicas
-});
+        if (!Schema::hasTable('cache')) {
+            Schema::create('cache', function (Blueprint $table) {
+                $table->string('key')->primary();
+                $table->mediumText('value');
+                $table->integer('expiration');
+            });
+        }
     }
 
     /**
@@ -21,8 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('cache');
     }
 };

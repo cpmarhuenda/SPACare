@@ -80,5 +80,6 @@ return [
 'leido' => 'Leido',
   'seleccionaPsicologo' => 'Selecciona un psicólogo',
     'seleccionaPaciente' => 'Selecciona un paciente',
-
+    'verArchivo' => 'Ver archivo',
+       'descargarArchivo' => 'Descargar Archivo'
 ];

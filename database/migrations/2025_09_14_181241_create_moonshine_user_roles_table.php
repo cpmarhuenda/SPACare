@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('citas', function (Blueprint $table) {
-            //
-                $table->string('hora_recurrente')->nullable();
-
-        });
+        if (!Schema::hasTable('moonshine_user_roles')) {
+            Schema::create('moonshine_user_roles', function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->string('name');
+                $table->timestamps();
+            });
+        }
     }
 
     /**
@@ -23,8 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('citas', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('moonshine_user_roles');
     }
 };

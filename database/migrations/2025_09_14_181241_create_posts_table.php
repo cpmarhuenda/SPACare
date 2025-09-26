@@ -11,10 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-            Schema::table('paciente_recurso', function (Blueprint $table) {
-        $table->boolean('descargado')->default(false);
-        $table->timestamp('fecha_descarga')->nullable();
-        });
+        if (!Schema::hasTable('posts')) {
+            Schema::create('posts', function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->text('title');
+                $table->text('content');
+                $table->timestamps();
+            });
+        }
     }
 
     /**
@@ -22,8 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
- Schema::table('paciente_recurso', function (Blueprint $table) {
-        $table->dropColumn(['descargado', 'fecha_descarga']);            //
-        });
+        Schema::dropIfExists('posts');
     }
 };
