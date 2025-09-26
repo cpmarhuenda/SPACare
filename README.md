@@ -45,7 +45,7 @@ Una vez descargado el contenido del repositorio e instalado el software indicado
     php artisan db:create
 
 ### 5. Configurar el entorno
-    cp .env.example .env
+    Copy-Item .env.example .env
     php artisan key:generate
 
 #### Configura tu base de datos en .env:
